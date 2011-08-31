@@ -1,0 +1,144 @@
+body {
+	background-image: url(../images/bg_noise.png);
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Verdana', sans-serif;
+}
+h2 {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 24pt;
+	font-weight: normal;
+	color: #333;
+}
+div#container {
+	width: 960px;
+	margin: 50px auto;
+	text-align: center;
+}
+div.txt {
+	border: 0px solid #0c0;
+	margin-bottom: 70px;
+}
+img#logo {
+	margin: 10px;
+}
+ul.icons {
+	border: 0px solid #00c;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.icons li {
+	border: 0px solid #c0c;
+	margin: 0;
+	padding: 0;
+	display: inline;
+	
+	margin-right: 0px;
+}
+div.legal {
+	border: 0px solid #c00;
+}
+a img {
+	vertical-align: top;
+}
+#facebox .content {
+	padding: 30px;
+}
+#facebox, #facebox a {
+	color: #333;
+}
+
+.nivoSlider {
+    position:relative;
+    width:640px; /* Change this to your images width */
+    height:920px; /* Change this to your images height */
+/*    background:url(images/loading.gif) no-repeat 50% 50%;*/
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.nivoSlider a {
+    border:0;
+    display:block;
+}
+
+@buttonColorOne: rgba(34,57,100,0.6);
+@buttonColorTwo: rgba(34,57,100,0.4);
+@buttonColorThree: rgba(34,57,100,0.5);
+
+.coolButton(@color, @borderRadius) {
+	line-height: 30px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	font: 11px 'Lucida Grande','Helvetica Neue',"Arial",sans-serif;
+	padding: 5px 15px 6px 15px;
+	margin: 2px auto;
+	display: inline-block;
+	border: none;
+	color: white;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+	text-decoration: none;
+	-webkit-border-radius:@borderRadius;
+	-moz-border-radius: @borderRadius;
+	border-radius:@borderRadius;
+	background: @color;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(.2,lighten(@color, 10%)),color-stop(1,darken(@color, 10%)));
+	background: -moz-linear-gradient(center top,lighten(@color, 10%) 20%,darken(@color, 10%) 100%);
+	-webkit-box-shadow: inset 0 1px 0 @buttonColorOne,
+						inset 1px 0 0 @buttonColorTwo,
+						inset -1px 0 0 @buttonColorThree,
+						inset 0 -1px 0 @buttonColorOne,
+						inset 0 2px 0 rgba(255,255,255,.3),
+						inset 0 0 4px rgba(255,255,255,.3),
+						0 1px 2px rgba(0,0,0,.29);
+	-moz-box-shadow:	inset 0 1px 0 @buttonColorOne,
+						inset 1px 0 0 @buttonColorTwo,
+						inset -1px 0 0 @buttonColorThree,
+						inset 0 -1px 0 @buttonColorOne,
+						inset 0 2px 0 rgba(255,255,255,.3),
+						inset 0 0 4px rgba(255,255,255,.3),
+						0 1px 2px rgba(0,0,0,.29);
+	box-shadow: inset 0 1px 0 @buttonColorOne,
+				inset 1px 0 0 @buttonColorTwo,
+				inset -1px 0 0 @buttonColorThree,
+				inset 0 -1px 0 @buttonColorOne,
+				inset 0 2px 0 rgba(255,255,255,.3),
+				inset 0 0 4px rgba(255,255,255,.3),
+				0 1px 2px rgba(0,0,0,.29);
+	&:hover {
+		background: lighten(@color, 10%);
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(.2,lighten(@color, 15%)),color-stop(1, darken(@color, 5%)));
+		background: -moz-linear-gradient(center top,lighten(@color, 20%) 20%,darken(@color, 0%) 100%);
+	}
+	&:active {
+		color: darken(#fff, 5%);
+		-webkit-box-shadow: inset 0 1px 0 rgba(10,10,10,0.5),
+							inset 1px 0 0 rgba(10,10,10,0.3),
+							inset -1px 0 0 rgba(10,10,10,0.4),
+							inset 0 -1px 0 rgba(10,10,10,0.5),
+							inset 0 1px 5px rgba(0,0,0,0.3),
+							0 1px 0 rgba(255,255,255,0.3);
+		-moz-box-shadow:	inset 0 1px 0 rgba(10,10,10,0.5),
+							inset 1px 0 0 rgba(10,10,10,0.3),
+							inset -1px 0 0 rgba(10,10,10,0.4),
+							inset 0 -1px 0 rgba(10,10,10,0.5),
+							inset 0 1px 5px rgba(0,0,0,0.3),
+							0 1px 0 rgba(255,255,255,0.3);
+		box-shadow:	inset 0 1px 0 rgba(10,10,10,0.5),
+					inset 1px 0 0 rgba(10,10,10,0.3),
+					inset -1px 0 0 rgba(10,10,10,0.4),
+					inset 0 -1px 0 rgba(10,10,10,0.5),
+					inset 0 1px 5px rgba(0,0,0,0.3),
+					0 1px 0 rgba(255,255,255,0.3);
+	}
+}
+a.button {
+	.coolButton(#219FDE, 4px);
+}
+a.grayButton {
+	.coolButton(#bbb, 20px);
+}
