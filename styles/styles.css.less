@@ -1,5 +1,5 @@
 body {
-	background-image: url(../images/bg_noise.png);
+/*	background-image: url(../images/bg_noise.png);*/
 	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Verdana', sans-serif;
 }
 h2 {
@@ -31,7 +31,7 @@ ul.icons li {
 	margin: 0;
 	padding: 0;
 	display: inline;
-	margin-right: 0px;
+	margin-right: 20px;
 }
 div.legal {
 	border: 0px solid #c00;
@@ -46,10 +46,26 @@ a img {
 	color: #333;
 }
 
+li {
+	transition:all .2s linear;  
+	-o-transition:all .2s linear;  
+	-moz-transition:all .2s linear;  
+	-webkit-transition:all .2s linear; 
+}
+
+body {
+	transition: background-color .5s linear;
+	-webkit-transition:background-color .5s linear; 
+}
+
+/*body:hover {
+	background-color: #3B76B1;
+}*/
+
 @media screen and (max-width:950px) {  
 	ul.icons li {
-		display: block;
-		margin-bottom: 20px;
+		/*display: block;*/
+		margin-right: 0px;
 	}
 }
 

@@ -3,10 +3,6 @@
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 		
-		<!-- <link rel="stylesheet/less" href="styles/styles.less" type="text/css">
-				<script src="js/less.js" type="text/javascript"></script>
-				 -->
-				
 		<link rel="stylesheet" href="styles/styles.css" type="text/css">
 		<link rel="stylesheet" href="styles/facebox.css" type="text/css">
 		<script type="text/javascript" src="js/facebox.js" ></script>
@@ -27,8 +23,26 @@
 			$(window).load(function() {
 			    $('#slider_bmw2010').nivoSlider();
 			});
-			function switchApp(app) {
-				
+			var apps = {
+				'bpt': {
+					'color': '#555'
+				},
+				'bmw2011': {
+					'color': '#3B76B1'
+				},				
+				'bmw2010': {
+					'color': '#FFF'
+				},	
+				'sp': {
+					'color': '#000'
+				}
+			}
+			function switchApp(appName) {
+				// alert(appName);
+				// alert(apps);
+				// alert(apps[appName]);
+				var app = apps.appName;
+				$('body').css('background-color', app.color);
 			}
 		</script>
 		
